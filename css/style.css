@@ -1,0 +1,365 @@
+/*reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output,  section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+/*global settings*/
+body{
+	color: #222;
+	font-size: 16px;
+	background-color: #ffffff;
+	height: 100vh;
+	font-weight: 300;
+	font-family: sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+section,div{
+	box-sizing: border-box;
+}
+.redFont{
+	color: #ff5555;
+}
+/*style for inline vertical-middle*/
+.inline-middle{
+	display: inline-block;
+	position: relative;
+	top:50%;
+	transform:translate(0,-50%);
+}
+.inline-block{
+	display: inline-block;
+}
+
+/*header of document*/
+#docHeader{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	position: fixed;
+	top:0;
+	width: 100%;
+	/*height: 7.4vh;*/
+	height: 7.4vh;
+	padding-left: 80px;
+	font-size: 14px;
+	color:#9b9b9b;
+}
+#logoDiv{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	height: 30px;
+	padding-right: 32px;
+	border-right: 1px solid #ddd;
+	vertical-align: baseline;
+}
+#logoDiv img{
+	width: 80px;
+	height:20px;
+}
+nav{
+	display: inline-flex;
+	align-items: center;
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 30px;
+}
+nav li{
+	display: inline-block;
+	padding-right: 36px;
+}
+.nav{
+	color: #9b9b9b;
+}
+
+/*first screen*/
+section#firstScreen{
+	position: fixed;
+	top: 7.4vh;
+	padding: 18.5vh 6.7vw 0 10.4vw;
+	box-sizing: border-box;
+	width: 100%;
+	z-index: 0;
+	/*temporary*/
+	display: none;
+}
+.introHeader{
+	margin-bottom: 40px;
+	font-size: 40px;
+}
+#introPic{
+	position: fixed;
+	bottom: 10vh;
+	right: 10vw;
+	width: 55.8vw;
+	z-index: 99
+}
+#introPic img{
+	width: 100%;
+}
+
+/*details*/
+#details{
+	position: relative;
+	height: 92.6vh;
+	overflow: scroll;
+	z-index: 99;
+	background-color: #fafafa;
+
+	font-size: 14px;
+	text-align: center;
+	/*temporary*/
+	top: 7.4vh;
+}
+/*styles for section of details */
+.desSection{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#details h2{
+	font-size: 36px;
+	font-weight: 400;
+}
+#details h3{
+	font-size: 16px;
+	font-weight: 400;
+}
+#details h4{
+	font-size: 14px;
+	color:#666;
+}
+/*products section*/
+#products{
+	padding-top: 170px;
+}
+#subhead{
+	margin-top: 24px;
+}
+#store{
+	margin-top: 60px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.proItem{
+	flex:none;
+	width: 160px;
+	height: 160px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	padding-top: 44px;
+	background-color: #fff;
+	box-shadow: 0px 4px 10px 5px rgba(0,0,0,0.01);
+}
+.proItem:nth-child(5),.proItem:nth-child(10){
+	margin-right: 0px;
+}
+.proItem img{
+	width: 50px;
+	height: 40px;
+}
+.proItem img{
+	width: 50px;
+	height: 40px;
+	margin-bottom: 30px;
+}
+.nonMgBtm{
+	margin-bottom: 0;
+}
+/*team section*/
+#team{
+	padding-top: 120px;
+}
+#scenes{
+	margin: 60px auto 50px auto;
+
+	width: 800px;
+	height: 290px;
+	
+	box-shadow: 0 8px 18px 8px rgba(0,0,0,0.03)
+}
+#scenes img{
+	width: 100%;
+	height: 100%;
+}
+#introText{
+	width: 740px;
+	height: 240px;
+	margin: 0 auto;
+	border: 1px solid #eee;
+	padding-left:30px;
+	padding-right: 30px;
+	line-height: 30px;
+	text-align: justify;
+	text-align-last: left;
+}
+#introText p{
+	position: relative;
+	top: 50%;
+	transform: translate(0,-50%);
+	color:#666;
+}
+#beliefs{
+	margin-top: 50px ;
+	margin-bottom: 120px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+#beliefs>div:first-child{
+	width: 320px;
+}
+#beliefs>div:nth-child(2){
+	width: 300px;
+}
+#beliefs>div:nth-child(3){
+	width: 320px;
+}
+#beliefs img{
+	width:44px;
+	height: 44px;
+	margin-bottom: 30px;
+}
+#beliefs p{
+	font-size: 14px;
+	margin-top: 14px;
+	color:#666;
+}
+/*recuitment*/
+#recruitment{
+	background-color: #fff;
+	padding: 120px;
+}
+#recruitment h2+h3{
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+.post{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 900px;
+	height: 100px;
+	margin: 0 auto 26px auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	border:1px solid #eee;
+	text-align: left;
+	color: #999;
+}
+.post:last-child{
+	margin-bottom: -2px;
+}
+.post:hover{
+	border:1px solid #ff5555;
+}
+#recruitment h4{
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: #222;
+	font-weight: 400;
+}
+.postLink{
+	display: block;
+}
+#benefits{
+}
+#benefits h3{
+	margin-top: 60px;
+	font-size: 16px;
+}
+#benefits li{
+	margin-top:20px;
+	color: #666;
+}
+/*footer*/
+footer{
+	display: inline-flex;
+	width: 900px;
+	height: 80px;
+	background-color: #fafafa;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	color: #999;
+}
+.addrTag{
+	color: #666;
+}
+/*for details to slide to top*/
+.slideBottom{
+	top: 100vh;
+	transition: top 0.5s ease-in-out;
+}
+.slideTop{
+	top: 7.4vh;
+	transition: top 0.5s ease-in-out;
+}
+
+#details::-webkit-scrollbar {
+  width:0.5rem;
+  height: 0;
+}
+#details::-webkit-scrollbar-track{
+  border:1px solid #aaa;
+  border-radius: 5px;
+  background-color: #aaa;
+}
+#details::-webkit-scrollbar-thumb{
+  border:1px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+}
